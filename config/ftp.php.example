@@ -1,0 +1,60 @@
+<?php
+
+return [
+    [
+        'name' => 'jailbreak',
+        'host' => '',
+        'port' => 21,
+        'username' => '',
+        'password' => '',
+        'root' => '',
+        'include' => [
+            'addons',
+            'cfg',
+            'materials',
+            'models',
+            'particles',
+            'resource/closecaption_english.txt',
+            'resource/closecaption_portuguese.txt',
+            'sound',
+            'bspconvar_whitelist.txt',
+            'mapcycle.txt',
+            'maplist.txt',
+            'ptrbanner.png',
+            'smartjaildoors.txt',
+            'motd.txt'
+        ],
+        'exclude' => [
+            'addons/sourcemod/logs',
+            'addons/sourcemod/scripting'
+        ]
+    ],
+    [
+        'name' => 'arenas',
+        'host' => '',
+        'port' => 21,
+        'username' => '',
+        'password' => '',
+        'root' => '',
+        'include' => [
+            'addons',
+            'cfg',
+            'materials',
+            'models',
+            'particles',
+            'resource/closecaption_english.txt',
+            'resource/closecaption_portuguese.txt',
+            'sound',
+            'bspconvar_whitelist.txt',
+            'mapcycle.txt',
+            'maplist.txt',
+            'ptrbanner.png',
+            'smartjaildoors.txt',
+            'motd.txt'
+        ],
+        'exclude' => [
+            'addons/sourcemod/logs',
+            'addons/sourcemod/scripting'
+        ]
+    ]
+];

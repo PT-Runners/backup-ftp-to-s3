@@ -1,0 +1,16 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "aws/aws-sdk-php": "^3.215",
+        "league/flysystem": "^2",
+        "league/flysystem-ftp": "2.0",
+        "league/flysystem-aws-s3-v3": "^2.4",
+        "sentry/sdk": "^3.1"
+    },
+    "autoload": {
+        "files": ["src/helpers.php"]
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    }
+}
