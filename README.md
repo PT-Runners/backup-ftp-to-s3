@@ -9,5 +9,6 @@
 ### Installation:
 
 - composer install
-- cp ftp.php.example ftp.php #setup ftp.php
+- cp config/ftp.php.example config/ftp.php #setup ftp.php
+- cp .env.example .env #setup env (SENTRY_DSN not required)
 - php upload-s3.php
