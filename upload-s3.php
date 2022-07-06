@@ -36,9 +36,10 @@ $adapters = (object)[
             'credentials' => [
                 'key'    => env('S3_KEY'),
                 'secret' => env('S3_SECRET')
-            ]
+            ],
         ]), 
-        env('S3_BUCKET')
+        env('S3_BUCKET'),
+        env('S3_FOLDER')
     )
 ];
 
@@ -165,7 +166,10 @@ foreach($ftpServers as $key => $ftpServer) {
     $zip->close();
 
     $stream = $filesystems->local->readStream("$ftpServerName-$now.zip");
-    $filesystems->s3->writeStream("$ftpServerName-$now.zip", $stream);
+    $filesystems->s3->writeStream("$ftpServerName-$now.zip", $stream, [
+        "visibility" => League\Flysystem\Visibility::PRIVATE,
+        "directory_visibility" => League\Flysystem\Visibility::PRIVATE
+    ]);
 
     unlink("$pathStorage/$ftpServerName-$now.zip");
 
